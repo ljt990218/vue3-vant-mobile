@@ -1,7 +1,6 @@
 const include = [
   'axios',
   'store',
-  'echarts',
   'lodash-es',
   'resize-detector',
   'store/plugins/expire',
