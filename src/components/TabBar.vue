@@ -11,7 +11,7 @@ const display = computed(() => {
 </script>
 
 <template>
-  <van-tabbar v-show="display" v-model="active" route>
+  <van-tabbar v-show="display" v-model="active" :placeholder="true" route>
     <van-tabbar-item replace to="/">
       {{ t('layouts.home') }}
       <template #icon>

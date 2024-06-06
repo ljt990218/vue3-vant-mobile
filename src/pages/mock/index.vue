@@ -21,27 +21,25 @@ function pull() {
 </script>
 
 <template>
-  <Container>
-    <div class="data-label">
-      {{ $t('mock.fromAsyncData') }}
-    </div>
+  <div class="data-label">
+    {{ $t('mock.fromAsyncData') }}
+  </div>
 
-    <div class="data-content bg-white dark:bg-[--van-background-2]">
-      <div v-if="messages">
-        {{ messages }}
-      </div>
-      <VanEmpty v-else :description="$t('mock.noData')" />
+  <div class="data-content bg-white dark:bg-[--van-background-2]">
+    <div v-if="messages">
+      {{ messages }}
     </div>
+    <VanEmpty v-else :description="$t('mock.noData')" />
+  </div>
 
-    <van-space class="m-10" direction="vertical" fill>
-      <VanButton type="primary" round block @click="pull">
-        {{ $t('mock.pull') }}
-      </VanButton>
-      <VanButton type="default" round block @click="messages = ''">
-        {{ $t('mock.reset') }}
-      </VanButton>
-    </van-space>
-  </Container>
+  <van-space class="m-10" direction="vertical" fill>
+    <VanButton type="primary" round block @click="pull">
+      {{ $t('mock.pull') }}
+    </VanButton>
+    <VanButton type="default" round block @click="messages = ''">
+      {{ $t('mock.reset') }}
+    </VanButton>
+  </van-space>
 </template>
 
 <style lang="less" scoped>
